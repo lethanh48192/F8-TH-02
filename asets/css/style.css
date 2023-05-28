@@ -29,12 +29,40 @@ a {
 
     color: #ffffff;
 }
-
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line2 {
+    --line-clamp: 2;
+}
+.break-all {
+    word-break: break-all;
+}
 .main-content {
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
     max-width: calc(100% - 48px);
+}
+.heading {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+.desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
 }
 
 /* header */
@@ -106,11 +134,12 @@ a {
     border-radius: 20px;
     width: 470px;
     height: 685px;
+    display: block;
 }
 .hero .hero-summary {
     position: absolute;
     width: 270px;
-    padding: 28px 24px;
+    padding: 24px;
     right: 0;
     bottom: 48px;
     background: #ffffff;
@@ -120,6 +149,7 @@ a {
 
 .hero .item {
     display: flex;
+    align-items: center;
 }
 .hero .item + .item {
     margin-top: 22px;
@@ -146,7 +176,6 @@ a {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.86;
-    /* identical to box height, or 186% */
     color: #5f5b53;
 }
 .hero .info .title {
@@ -158,21 +187,12 @@ a {
 .hero .content-block {
     padding: 64px 0 0 130px;
 }
-.hero .title {
-    font-family: var(--font-heading);
-    font-style: normal;
-    font-weight: 700;
+.heading.lv1 {
     font-size: 5.8rem;
     line-height: 1.17;
-    letter-spacing: -0.02em;
-    color: #171100;
 }
-.hero .hero-desc {
+.hero .desc.hero-desc {
     margin-top: 22px;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 1.67;
-    color: #5f5b53;
 }
 .hero .cta-group {
     margin-top: 55px;
@@ -182,8 +202,7 @@ a {
 .hero .hero-btn {
     background: var(--primary-color);
     min-width: 180px;
-	line-height: 64px;
-
+    line-height: 64px;
 }
 .hero .play {
     display: flex;
@@ -206,7 +225,6 @@ a {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
-    /* identical to box height, or 167% */
     color: #171100;
     margin-left: 14px;
 }
@@ -215,12 +233,115 @@ a {
 }
 .hero .student {
     margin: 8px 0 0 -28px;
-    
 }
 .hero .student strong {
     font-weight: 700;
     font-size: 4.4rem;
     color: #171100;
-    /* margin-left: 28px; */
-	padding: 0 8px 0 28px;
+
+    padding: 0 8px 0 28px;
+}
+/* Popular */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+.popular .popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+.desc.popular-desc {
+    margin-top: 16px;
+    width: 458px;
+}
+.popular .control-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffb900;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.popular .control-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+.popular .course-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+.popular .course-item {
+    flex: 1;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+    /* border: 1px solid red; */
+}
+.popular .course-item:hover {
+    background: #ffffff;
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.1);
+}
+
+.popular .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    border-radius: 12px 12px 0px 0px;
+    margin: -1px;
+}
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+.popular .course-item .head,
+.popular .course-item .star,
+.popular .course-item .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popular .title a {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    /* identical to box height, or 167% */
+    color: #171100;
+    padding-right: 6px;
+}
+.popular .info .value {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fea31b;
+    margin-left: 6px;
+}
+.popular .course-desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    /* or 186% */
+}
+.popular .foot {
+    margin-top: 12px;
+}
+.popular .foot .value {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    /* identical to box height, or 167% */
+    color: #171100;
+}
+.popular .book-btn {
+    border: none;
+    transition: 0.5s;
+}
+.popular .book-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
 }
