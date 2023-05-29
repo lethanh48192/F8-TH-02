@@ -58,6 +58,14 @@ a {
     letter-spacing: -0.02em;
     color: #171100;
 }
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
 .desc {
     font-weight: 400;
     font-size: 1.8rem;
@@ -187,10 +195,7 @@ a {
 .hero .content-block {
     padding: 64px 0 0 130px;
 }
-.heading.lv1 {
-    font-size: 5.8rem;
-    line-height: 1.17;
-}
+
 .hero .desc.hero-desc {
     margin-top: 22px;
 }
@@ -251,10 +256,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-.heading.lv2 {
-    font-size: 3.8rem;
-    line-height: 1.26;
-}
+
 .desc.popular-desc {
     margin-top: 16px;
     width: 458px;
@@ -354,12 +356,12 @@ a {
 }
 .feedback .feedback-list {
     display: flex;
-	overflow: hidden;
+    overflow: hidden;
 }
 .feedback .feedback-item {
     display: flex;
     flex-shrink: 0;
-	width: 100%;
+    width: 100%;
 }
 .feedback .avatar {
     width: 72px;
@@ -409,4 +411,161 @@ a {
     font-size: 2.6rem;
     line-height: 1.54;
     color: #ffffff;
+}
+/* Feature */
+.feature {
+    margin-top: 135px;
+}
+.feature .feature-content {
+    display: flex;
+    justify-content: space-between;
+}
+.feature .images {
+    display: flex;
+    gap: 30px;
+}
+.feature .images img {
+    width: 270px;
+    height: 405px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.feature .images img:first-child {
+    margin-top: 34px;
+}
+.feature .info {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.feature .feature-desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53;
+    margin-top: 16px;
+}
+.feature .feature-btn {
+    margin-top: 32px;
+    min-width: 137px;
+    background: var(--primary-color);
+}
+
+/* Feature 2 */
+.feature-2nd {
+    margin-top: 135px;
+}
+.feature-2nd .feature-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.feature-2nd .info {
+    width: 49%;
+}
+.feature-2nd .images img {
+    width: 470px;
+    height: 440px;
+}
+
+/* Blog */
+.blog {
+    margin-top: 135px;
+    background: #fffcf4;
+    padding: 96px 0;
+}
+.blog .blog-head {
+    text-align: center;
+}
+.blog .blog-desc {
+    margin: 16px auto 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #696262;
+    width: 448px;
+}
+.blog .blog-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+}
+.blog .blog-item {
+    background: #ffffff;
+    border-radius: 16px;
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
+}
+.blog .blog-item:hover {
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
+.blog .blog-list .thumb {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+.blog-item .info {
+    padding: 20px 20px 22px;
+}
+.blog-item .info .date {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+    padding-bottom: 12px;
+}
+.blog-item .info .date::before {
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffb900;
+    margin-right: 4px;
+}
+.blog-item .info .date::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    right: -27px;
+
+    height: 1px;
+    background: #e2dfda;
+    border-radius: 0.5px;
+}
+.blog-item .title a {
+    display: inline-block;
+    margin: 12px 0;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #171100;
+}
+.blog-item .blog-btn:hover {
+    background: var(--primary-color);
+}
+.blog .dots {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+}
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5f5b53;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.blog .dot.active {
+    background: var(--primary-color);
+    cursor: default;
 }
